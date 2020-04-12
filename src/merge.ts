@@ -1,11 +1,14 @@
-export function mergeSort(arrayToSort: number[]): number[] {
+export function mergeSort<T>(
+  arrayToSort: T[],
+  compare: (a: T, b: T) => -1 | 0 | 1,
+): T[] {
   if (arrayToSort.length <= 1) {
     return arrayToSort;
   }
   const halvesLimit = Math.floor(arrayToSort.length / 2);
   const left = arrayToSort.slice(0, halvesLimit);
   const right = arrayToSort.slice(halvesLimit, arrayToSort.length);
-  return merge(mergeSort(left), mergeSort(right));
+  return merge(mergeSort(left, compare), mergeSort(right, compare), compare);
 }
 
 /**
@@ -13,7 +16,11 @@ export function mergeSort(arrayToSort: number[]): number[] {
  * array, ordered also in an ascending way.
  *
  */
-function merge(parArr1: number[], parArr2: number[]): number[] {
+function merge<T>(
+  parArr1: T[],
+  parArr2: T[],
+  compare: (a: T, b: T) => -1 | 0 | 1,
+): T[] {
   const result = [];
   const arr1 = [...parArr1];
   const arr2 = [...parArr2];

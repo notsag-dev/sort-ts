@@ -10,12 +10,15 @@ import { swap } from './swap';
  * ordered array.
  *
  */
-export function selectionSort(arrayParam: number[]) {
+export function selectionSort<T>(
+  arrayParam: T[],
+  compare: (a: T, b: T) => -1 | 0 | 1,
+): T[] {
   let result = [...arrayParam];
   for (let i = 0; i < result.length - 1; i++) {
     let minInd = i;
     for (let j = i; j < result.length; j++) {
-      if (result[j] < result[minInd]) {
+      if (compare(result[j], result[minInd]) < 0) {
         minInd = j;
       }
     }

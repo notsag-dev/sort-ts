@@ -2,7 +2,10 @@
  * Not-in-place implementation of quick sort.
  *
  */
-export function quickSort(arrayToSort: number[]): number[] {
+export function quickSort<T>(
+  arrayToSort: T[],
+  compare: (a: T, b: T) => -1 | 0 | 1,
+): T[] {
   if (arrayToSort.length <= 1) {
     return arrayToSort;
   }
@@ -19,7 +22,7 @@ export function quickSort(arrayToSort: number[]): number[] {
   while(ind < pivotIndex) {
     // Every element > pivot must be to the right of the pivot
     // What's lesser or equal stays on the left
-    if (arrayToSort[ind] > arrayToSort[pivotIndex]) {
+    if (compare(arrayToSort[ind], arrayToSort[pivotIndex]) > 0) {
       const removedElement = arrayToSort.splice(ind, 1)[0];
       arrayToSort.push(removedElement);
       pivotIndex--;
@@ -29,8 +32,8 @@ export function quickSort(arrayToSort: number[]): number[] {
   }
   
   return [
-    ...quickSort(arrayToSort.slice(0, pivotIndex)),
+    ...quickSort(arrayToSort.slice(0, pivotIndex), compare),
     arrayToSort[pivotIndex],
-    ...quickSort(arrayToSort.slice(pivotIndex + 1, arrayToSort.length)),
+    ...quickSort(arrayToSort.slice(pivotIndex + 1, arrayToSort.length), compare),
   ];
 }

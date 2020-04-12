@@ -7,13 +7,16 @@
  * array.
  *
  */
-export function insertionSort(arrayParam: number[]): number[] {
-  let result = [...arrayParam];
+export function insertionSort<T>(
+  arrayToSort: T[],
+  compare: (a: T, b: T) => -1 | 0 | 1,
+): T[] {
+  let result = [...arrayToSort];
   for (let i = 1; i < result.length; i++) {
     // TODO do a better insertion algorithm to improve performance
     let newIndexOfUnorderedElement = i;
     for (let j = i - 1; j >= 0; j--) {
-      if (result[i] < result[j]) {
+      if (compare(result[i], result[j]) < 0) {
         newIndexOfUnorderedElement--; 
       } else {
         break;
