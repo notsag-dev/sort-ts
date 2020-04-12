@@ -1,0 +1,12 @@
+{
+  "name": "sorting-algorithms",
+  "version": "1.0.0",
+  "description": "Sorting algorithms in typescript",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc index.ts --outDir build && node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "notsag-dev",
+  "license": "GPL-3.0-or-later"
+}
