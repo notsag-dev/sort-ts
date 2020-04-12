@@ -1,3 +1,7 @@
+/**
+ * Not-in-place implementation of quick sort.
+ *
+ */
 export function quickSort(arrayToSort: number[]): number[] {
   if (arrayToSort.length <= 1) {
     return arrayToSort;
