@@ -1,5 +1,3 @@
-import { swap } from './swap';
-
 /**
  * Insertion sort.
  *
