@@ -21,7 +21,7 @@ function merge<T>(
   parArr2: T[],
   compare: (a: T, b: T) => number
 ): T[] {
-  const result = [];
+  const result: T[] = [];
   const arr1 = [...parArr1];
   const arr2 = [...parArr2];
   while (arr1.length > 0 || arr2.length > 0) {
@@ -32,9 +32,9 @@ function merge<T>(
       return result.concat(arr1);
     }
     if (compare(arr1[0], arr2[0]) < 0) {
-      result.push(arr1.shift());
+      result.push(arr1.shift()!);
     } else {
-      result.push(arr2.shift());
+      result.push(arr2.shift()!);
     }
   }
   return result;
