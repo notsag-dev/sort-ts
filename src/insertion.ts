@@ -9,7 +9,7 @@
  */
 export function insertionSort<T>(
   arrayToSort: T[],
-  compare: (a: T, b: T) => -1 | 0 | 1
+  compare: (a: T, b: T) => number
 ): T[] {
   let result = [...arrayToSort];
   for (let i = 1; i < result.length; i++) {

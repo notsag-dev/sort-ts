@@ -2,7 +2,7 @@ import { swap } from './swap';
 
 export function bubbleSort<T>(
   arrayToSort: T[],
-  compare: (a: T, b: T) => -1 | 0 | 1
+  compare: (a: T, b: T) => number
 ): T[] {
   let arr = [...arrayToSort];
   for (let i = arr.length - 1; i > 0; i--) {

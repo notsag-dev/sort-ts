@@ -11,7 +11,7 @@ import { swap } from './swap';
  */
 export function selectionSort<T>(
   arrayParam: T[],
-  compare: (a: T, b: T) => -1 | 0 | 1
+  compare: (a: T, b: T) => number
 ): T[] {
   let result = [...arrayParam];
   for (let i = 0; i < result.length - 1; i++) {

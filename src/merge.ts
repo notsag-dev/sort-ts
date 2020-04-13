@@ -1,6 +1,6 @@
 export function mergeSort<T>(
   arrayToSort: T[],
-  compare: (a: T, b: T) => -1 | 0 | 1
+  compare: (a: T, b: T) => number
 ): T[] {
   if (arrayToSort.length <= 1) {
     return arrayToSort;
