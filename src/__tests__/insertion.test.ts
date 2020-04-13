@@ -1,4 +1,3 @@
-import { arrays } from './array.fixture';
 import { insertionSort } from '../';
 
 describe('insertionSort()', () => {

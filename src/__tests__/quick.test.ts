@@ -1,4 +1,4 @@
-import { quickSort } from '..';
+import { quickSort } from '../';
 
 describe('quickSort()', () => {
   it('returns an empty array when it receives an empty array', () => {

@@ -1,4 +1,4 @@
-import { selectionSort } from '..';
+import { selectionSort } from '../';
 
 describe('selectionSort()', () => {
   it('returns an empty array when it receives an empty array', () => {
