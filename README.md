@@ -26,3 +26,6 @@ function compare(a: number, b: number): number {
 const orderedArray = bubbleSort([-1, 1, -100, 1000, 23, 34, 10000, 0], compare);
 // Same for other algorithms
 ```
+
+## Contribute
+Some algorithms could be added to the library. Feel free to add new ones and create a pull request!
