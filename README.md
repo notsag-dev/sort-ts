@@ -1,4 +1,6 @@
 # sort-ts
+![build](https://github.com/notsag-dev/sort-ts/workflows/build/badge.svg)
+
 Sorting algorithms for Typescript. All of the implemented algorithms are at the moment not-in-place ones, meaning they create and return a new array instead of mutating the original one.
 
 ## Install
