@@ -1,6 +1,6 @@
 {
   "name": "sort-ts",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Sorting algorithms for Typescript",
   "files": [
     "/dist"
@@ -21,13 +21,11 @@
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
-    "jest": "^25.3.0",
-    "ts-jest": "^25.3.1"
+    "ts-jest": "^25.3.1",
+    "typescript": "^3.8.3",
+    "jest": "^25.3.0"
   },
   "engines": {
     "node": ">= 12.14.1"
-  },
-  "dependencies": {
-    "typescript": "^3.8.3"
   }
 }
