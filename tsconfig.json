@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "outFile": "build/app.js",
+    "module": "system"
+  },
+  "files": ["./src/index.ts"]
+}

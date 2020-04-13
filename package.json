@@ -2,9 +2,10 @@
   "name": "sorting-algorithms",
   "version": "1.0.0",
   "description": "Sorting algorithms in typescript",
-  "main": "index.js",
+  "main": "build/app.js",
+  "types": "build/app.d.ts",
   "scripts": {
-    "start": "tsc src/index.ts --outDir build && node build/index.js",
+    "build": "tsc --project tsconfig.json --outDir build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "notsag-dev",
