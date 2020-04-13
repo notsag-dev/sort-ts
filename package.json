@@ -1,12 +1,17 @@
 {
   "name": "sort-ts",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Sorting algorithms for Typescript",
-  "main": "build/app.js",
-  "types": "build/app.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc --project tsconfig.json --outDir build",
-    "test": "jest"
+    "build": "tsc",
+    "test": "jest",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test"
   },
   "author": "notsag-dev",
   "license": "GPL-3.0-or-later",
@@ -17,7 +22,12 @@
   "devDependencies": {
     "@types/jest": "^25.2.1",
     "jest": "^25.3.0",
-    "ts-jest": "^25.3.1",
+    "ts-jest": "^25.3.1"
+  },
+  "engines": {
+    "node": ">= 12.14.1"
+  },
+  "dependencies": {
     "typescript": "^3.8.3"
   }
 }

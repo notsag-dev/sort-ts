@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "outFile": "build/app.js",
-    "module": "system",
-    "moduleResolution": "node",
+    "outDir": "dist",
     "esModuleInterop": true,
-    "lib": ["es6"]
+    "module": "ES2015",
+    "moduleResolution": "Node",
+    "lib": ["es2017", "es7", "es6"],
+    "target": "es2017"
   },
-  "files": ["./src/index.ts"]
+  "exclude": [],
+  "include": ["src/**/*"]
 }
