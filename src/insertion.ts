@@ -23,7 +23,6 @@ export function insertionSort<T>(
       }
     }
 
-    // TODO create function to insert in ordered array
     if (newIndexOfUnorderedElement !== i) {
       result = [
         ...result.slice(0, newIndexOfUnorderedElement),
