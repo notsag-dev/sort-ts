@@ -2,7 +2,10 @@
   "compilerOptions": {
     "declaration": true,
     "outFile": "build/app.js",
-    "module": "system"
+    "module": "system",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "lib": ["es6"]
   },
   "files": ["./src/index.ts"]
 }
