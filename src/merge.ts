@@ -19,7 +19,7 @@ export function mergeSort<T>(
 function merge<T>(
   parArr1: T[],
   parArr2: T[],
-  compare: (a: T, b: T) => -1 | 0 | 1
+  compare: (a: T, b: T) => number
 ): T[] {
   const result = [];
   const arr1 = [...parArr1];
