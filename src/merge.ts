@@ -1,6 +1,6 @@
 export function mergeSort<T>(
   arrayToSort: T[],
-  compare: (a: T, b: T) => -1 | 0 | 1,
+  compare: (a: T, b: T) => -1 | 0 | 1
 ): T[] {
   if (arrayToSort.length <= 1) {
     return arrayToSort;
@@ -19,7 +19,7 @@ export function mergeSort<T>(
 function merge<T>(
   parArr1: T[],
   parArr2: T[],
-  compare: (a: T, b: T) => -1 | 0 | 1,
+  compare: (a: T, b: T) => -1 | 0 | 1
 ): T[] {
   const result = [];
   const arr1 = [...parArr1];
@@ -31,7 +31,7 @@ function merge<T>(
     if (arr2.length === 0) {
       return result.concat(arr1);
     }
-    if (arr1[0] < arr2[0]) {
+    if (compare(arr1[0], arr2[0]) < 0) {
       result.push(arr1.shift());
     } else {
       result.push(arr2.shift());

@@ -1,9 +1,8 @@
 import { swap } from './swap';
 
-
 /**
  * Selection sort.
- * 
+ *
  * The sorted array is built from left to right, from min to max.
  * Each iteration goes through the unordered elements and picks
  * the minimum of them, which will be the next element of the
@@ -12,7 +11,7 @@ import { swap } from './swap';
  */
 export function selectionSort<T>(
   arrayParam: T[],
-  compare: (a: T, b: T) => -1 | 0 | 1,
+  compare: (a: T, b: T) => -1 | 0 | 1
 ): T[] {
   let result = [...arrayParam];
   for (let i = 0; i < result.length - 1; i++) {

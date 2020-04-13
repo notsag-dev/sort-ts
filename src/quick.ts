@@ -4,7 +4,7 @@
  */
 export function quickSort<T>(
   arrayToSort: T[],
-  compare: (a: T, b: T) => -1 | 0 | 1,
+  compare: (a: T, b: T) => -1 | 0 | 1
 ): T[] {
   if (arrayToSort.length <= 1) {
     return arrayToSort;
@@ -19,7 +19,7 @@ export function quickSort<T>(
 
   let ind = 0;
   let done;
-  while(ind < pivotIndex) {
+  while (ind < pivotIndex) {
     // Every element > pivot must be to the right of the pivot
     // What's lesser or equal stays on the left
     if (compare(arrayToSort[ind], arrayToSort[pivotIndex]) > 0) {
@@ -30,10 +30,13 @@ export function quickSort<T>(
       ind++;
     }
   }
-  
+
   return [
     ...quickSort(arrayToSort.slice(0, pivotIndex), compare),
     arrayToSort[pivotIndex],
-    ...quickSort(arrayToSort.slice(pivotIndex + 1, arrayToSort.length), compare),
+    ...quickSort(
+      arrayToSort.slice(pivotIndex + 1, arrayToSort.length),
+      compare
+    ),
   ];
 }

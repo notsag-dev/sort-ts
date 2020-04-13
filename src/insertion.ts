@@ -9,7 +9,7 @@
  */
 export function insertionSort<T>(
   arrayToSort: T[],
-  compare: (a: T, b: T) => -1 | 0 | 1,
+  compare: (a: T, b: T) => -1 | 0 | 1
 ): T[] {
   let result = [...arrayToSort];
   for (let i = 1; i < result.length; i++) {
@@ -17,7 +17,7 @@ export function insertionSort<T>(
     let newIndexOfUnorderedElement = i;
     for (let j = i - 1; j >= 0; j--) {
       if (compare(result[i], result[j]) < 0) {
-        newIndexOfUnorderedElement--; 
+        newIndexOfUnorderedElement--;
       } else {
         break;
       }
@@ -30,7 +30,7 @@ export function insertionSort<T>(
         result[i],
         ...result.slice(newIndexOfUnorderedElement, i),
         ...result.slice(i + 1, result.length),
-      ]
+      ];
     }
   }
   return result;
