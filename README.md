@@ -15,7 +15,8 @@ import {
   selectionSort,
   insertionSort,
   quickSort,
-  mergeSort
+  mergeSort,
+  shellSort
 } from 'sort-ts';
 
 // Compare function for ascending order
