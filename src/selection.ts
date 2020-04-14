@@ -10,10 +10,10 @@ import { swap } from './swap';
  *
  */
 export function selectionSort<T>(
-  arrayParam: T[],
+  arrayToSort: T[],
   compare: (a: T, b: T) => number
 ): T[] {
-  let result = [...arrayParam];
+  let result = [...arrayToSort];
   for (let i = 0; i < result.length - 1; i++) {
     let minInd = i;
     for (let j = i; j < result.length; j++) {
