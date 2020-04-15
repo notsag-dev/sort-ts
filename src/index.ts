@@ -1,3 +1,4 @@
+export * from './binaryTree';
 export * from './bubble';
 export * from './insertion';
 export * from './merge';

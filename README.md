@@ -11,11 +11,12 @@ npm install sort-ts
 ## Use
 ```javascript
 import {
+  binaryTreeSort,
   bubbleSort,
-  selectionSort,
   insertionSort,
-  quickSort,
   mergeSort,
+  quickSort,
+  selectionSort,
   shellSort
 } from 'sort-ts';
 
