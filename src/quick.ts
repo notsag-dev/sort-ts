@@ -10,9 +10,6 @@ export function quickSort<T>(
     return arrayToSort;
   }
 
-  // TODO add parameter to specify if the array should be mutated
-  const arr = [...arrayToSort];
-
   // The pivot is arbitrarily assigned to the righ-most element of
   // the array
   let pivotIndex = arrayToSort.length - 1;
